@@ -40,13 +40,13 @@ public class OverwatchLeague2Application implements CommandLineRunner {
 					m.getName(),
 					m.getTeam(),
 					//heroes,
-					String.valueOf(m.getEliminations_avg_per_10m()),
-					String.valueOf(m.getDeaths_avg_per_10m()),
-					String.valueOf(m.getHero_damage_avg_per_10m()),
-					String.valueOf(m.getHealing_avg_per_10m()),
-					String.valueOf(m.getUltimates_earned_avg_per_10m()),
-					String.valueOf(m.getFinal_blows_avg_per_10m()),
-					String.valueOf(m.getTime_played_total())
+					m.getEliminations_avg_per_10m(),
+					m.getDeaths_avg_per_10m(),
+					m.getHero_damage_avg_per_10m(),
+					m.getHealing_avg_per_10m(),
+					m.getUltimates_earned_avg_per_10m(),
+					m.getFinal_blows_avg_per_10m(),
+					m.getTime_played_total()
 					));
 			
 		}

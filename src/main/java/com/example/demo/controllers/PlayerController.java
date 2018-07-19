@@ -34,13 +34,13 @@ public class PlayerController {
 					m.getName(),
 					m.getTeam(),
 					//heroes,
-					String.valueOf(m.getEliminations_avg_per_10m()),
-					String.valueOf(m.getDeaths_avg_per_10m()),
-					String.valueOf(m.getHero_damage_avg_per_10m()),
-					String.valueOf(m.getHealing_avg_per_10m()),
-					String.valueOf(m.getUltimates_earned_avg_per_10m()),
-					String.valueOf(m.getFinal_blows_avg_per_10m()),
-					String.valueOf(m.getTime_played_total())
+					m.getEliminations_avg_per_10m(),
+					m.getDeaths_avg_per_10m(),
+					m.getHero_damage_avg_per_10m(),
+					m.getHealing_avg_per_10m(),
+					m.getUltimates_earned_avg_per_10m(),
+					m.getFinal_blows_avg_per_10m(),
+					m.getTime_played_total()
 					));
 			
 		}
@@ -61,14 +61,14 @@ public class PlayerController {
 		
 		switch (criteria) {
 		
-			case "eliminations" :return repo.findAllOrderByEliminations();
-			case "deaths" : return repo.findAllOrderByDeaths();
-			case "damage" :return repo.findAllOrderByDamage();
-			case "healing" :return repo.findAllOrderByHealing();
-			case "ultimates" :return repo.findAllOrderByUltimates();
-			case "finalblows" :return repo.findAllOrderByFinalBlows();
-			case "timeplayed" :return repo.findAllOrderByTimePlayed();
-			case "roles" :return repo.findAllOrderByRole();
+			case "eliminations" :return repo.findAllByOrderByEliminations();
+			case "deaths" : return repo.findAllByOrderByDeaths();
+			case "damage" :return repo.findAllByOrderByDamage();
+			case "healing" :return repo.findAllByOrderByHealing();
+			case "ultimates" :return repo.findAllByOrderByUltimates();
+			case "finalblows" :return repo.findAllByOrderByFinalBlows();
+			case "timeplayed" :return repo.findAllByOrderByTimePlayed();
+			case "roles" :return repo.findAllByOrderByRole();
 			default : return null;
 		
 		}

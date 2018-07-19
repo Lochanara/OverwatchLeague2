@@ -14,17 +14,17 @@ public class Player {
 	public String name;
 	public String team;
 	//public List<String> heroes;
-	public String eliminations;
-	public String deaths;
-	public String damage;
-	public String healing;
-	public String ultimates;
-	public String finalBlows;
-	public String timePlayed;
+	public Double eliminations;
+	public Double deaths;
+	public Double damage;
+	public Double healing;
+	public Double ultimates;
+	public Double finalBlows;
+	public Double timePlayed;
 	
 	public Player () {}
 	
-	public Player (int playerId, int teamId, String role, String name, String team, /**List<String> heroes,**/ String eliminations, String deaths, String damage, String healing, String ultimates, String finalBlows, String timePlayed) {
+	public Player (int playerId, int teamId, String role, String name, String team, /**List<String> heroes,**/ Double eliminations, Double deaths, Double damage, Double healing, Double ultimates, Double finalBlows, Double timePlayed) {
 		
 		this.playerId = playerId;
 		this.teamId = teamId;

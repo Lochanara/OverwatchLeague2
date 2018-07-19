@@ -9,14 +9,14 @@ import com.example.demo.models.Player;
 //@RepositoryRestResource(collectionResourceRel = "league", path = "league")
 public interface PlayerRepository extends MongoRepository<Player,Integer> {
 	
-	Iterable<Player> findAllOrderByEliminations ();
-	Iterable<Player> findAllOrderByDeaths ();
-	Iterable<Player> findAllOrderByDamage();
-	Iterable<Player> findAllOrderByHealing ();
-	Iterable<Player> findAllOrderByUltimates ();
-	Iterable<Player> findAllOrderByFinalBlows ();
-	Iterable<Player> findAllOrderByTimePlayed ();
-	Iterable<Player> findAllOrderByRole ();
+	Iterable<Player> findAllByOrderByEliminations ();
+	Iterable<Player> findAllByOrderByDeaths ();
+	Iterable<Player> findAllByOrderByDamage();
+	Iterable<Player> findAllByOrderByHealing ();
+	Iterable<Player> findAllByOrderByUltimates ();
+	Iterable<Player> findAllByOrderByFinalBlows ();
+	Iterable<Player> findAllByOrderByTimePlayed ();
+	Iterable<Player> findAllByOrderByRole ();
 	
 	
 	Iterable<Player> findByName(String name);
