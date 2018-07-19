@@ -22,8 +22,6 @@ public class PlayerController {
 		
 		RestTemplate restTemplate = new RestTemplate();
         Data d = restTemplate.getForObject("https://api.overwatchleague.com/stats/players", Data.class);
-       
-        //s.updateRepo(d.getData());
         
         for (PlayerData m : d.getData()) {
 			
