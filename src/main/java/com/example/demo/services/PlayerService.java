@@ -34,7 +34,7 @@ public class PlayerService {
 			
 			@Override
 		    public int compare(PlayerKD o1, PlayerKD o2) {
-		        return (int) (o1.KD - o2.KD);
+		        return (Double.compare(o2.KD, o1.KD));
 		    }
 						
 		});
