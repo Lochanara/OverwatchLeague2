@@ -42,7 +42,5 @@ public class PlayerService {
 		return playerKD;
 		
 	}
-	
-	//public Iterable<Player>
 
 }
