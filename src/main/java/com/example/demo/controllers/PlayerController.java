@@ -61,14 +61,15 @@ public class PlayerController {
 		
 		switch (criteria) {
 		
-			case "eliminations" :return repo.findAllByOrderByEliminations();
-			case "deaths" : return repo.findAllByOrderByDeaths();
-			case "damage" :return repo.findAllByOrderByDamage();
-			case "healing" :return repo.findAllByOrderByHealing();
-			case "ultimates" :return repo.findAllByOrderByUltimates();
-			case "finalblows" :return repo.findAllByOrderByFinalBlows();
-			case "timeplayed" :return repo.findAllByOrderByTimePlayed();
+		    case "team"  :return repo.findAllByOrderByTeam();
 			case "roles" :return repo.findAllByOrderByRole();
+			case "eliminations" :return repo.findAllByOrderByEliminationsDesc();
+			case "deaths" : return repo.findAllByOrderByDeathsDesc();
+			case "damage" :return repo.findAllByOrderByDamageDesc();
+			case "healing" :return repo.findAllByOrderByHealingDesc();
+			case "ultimates" :return repo.findAllByOrderByUltimatesDesc();
+			case "finalblows" :return repo.findAllByOrderByFinalBlowsDesc();
+			case "timeplayed" :return repo.findAllByOrderByTimePlayedDesc();
 			default : return null;
 		
 		}
@@ -98,13 +99,13 @@ public class PlayerController {
 			
 						case "name": return repo.findByTeamOrderByName(criteria1val);
 						case "role": return repo.findByTeamOrderByRole(criteria1val);
-						case "eliminations": return repo.findByTeamOrderByEliminations(criteria1val);
-						case "deaths": return repo.findByTeamOrderByDeaths(criteria1val);
-						case "damage": return repo.findByTeamOrderByDamage(criteria1val);
-						case "healing": return repo.findByTeamOrderByHealing(criteria1val);
-						case "ultimates": return repo.findByTeamOrderByUltimates(criteria1val);
-						case "finalblows": return repo.findByTeamOrderByFinalBlows(criteria1val);
-						case "timeplayed": return repo.findByTeamOrderByTimePlayed(criteria1val);
+						case "eliminations": return repo.findByTeamOrderByEliminationsDesc(criteria1val);
+						case "deaths": return repo.findByTeamOrderByDeathsDesc(criteria1val);
+						case "damage": return repo.findByTeamOrderByDamageDesc(criteria1val);
+						case "healing": return repo.findByTeamOrderByHealingDesc(criteria1val);
+						case "ultimates": return repo.findByTeamOrderByUltimatesDesc(criteria1val);
+						case "finalblows": return repo.findByTeamOrderByFinalBlowsDesc(criteria1val);
+						case "timeplayed": return repo.findByTeamOrderByTimePlayedDesc(criteria1val);
 						default: return null;
 			
 						}
@@ -113,13 +114,13 @@ public class PlayerController {
 			
 						case "name": return repo.findByRoleOrderByName(criteria1val);
 						case "team": return repo.findByRoleOrderByTeam(criteria1val);
-						case "eliminations": return repo.findByRoleOrderByEliminations(criteria1val);
-						case "deaths": return repo.findByRoleOrderByDeaths(criteria1val);
-						case "damage": return repo.findByRoleOrderByDamage(criteria1val);
-						case "healing": return repo.findByRoleOrderByHealing(criteria1val);
-						case "ultimates": return repo.findByRoleOrderByUltimates(criteria1val);
-						case "finalblows": return repo.findByRoleOrderByFinalBlows(criteria1val);
-						case "timeplayed": return repo.findByRoleOrderByTimePlayed(criteria1val);
+						case "eliminations": return repo.findByRoleOrderByEliminationsDesc(criteria1val);
+						case "deaths": return repo.findByRoleOrderByDeathsDesc(criteria1val);
+						case "damage": return repo.findByRoleOrderByDamageDesc(criteria1val);
+						case "healing": return repo.findByRoleOrderByHealingDesc(criteria1val);
+						case "ultimates": return repo.findByRoleOrderByUltimatesDesc(criteria1val);
+						case "finalblows": return repo.findByRoleOrderByFinalBlowsDesc(criteria1val);
+						case "timeplayed": return repo.findByRoleOrderByTimePlayedDesc(criteria1val);
 						default: return null;
 							
 						}
