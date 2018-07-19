@@ -10,12 +10,17 @@ import com.example.demo.models.Player;
 import com.example.demo.overwatchapi.Data;
 import com.example.demo.overwatchapi.PlayerData;
 import com.example.demo.repositories.PlayerRepository;
+import com.example.demo.services.PlayerKD;
+import com.example.demo.services.PlayerService;
 
 @RestController
 public class PlayerController {
 	
 	@Autowired
 	PlayerRepository repo;
+	
+	@Autowired
+	PlayerService service;
 	
 	@GetMapping("/update")
 	public String updatePlayers () {
@@ -128,6 +133,13 @@ public class PlayerController {
 			default : return null;
 	
 		}
+		
+	}
+	
+	@GetMapping("/players/kd")
+	public Iterable<PlayerKD> getPlayerByKD () {
+		
+		return service.findAllByKD();
 		
 	}
 	
