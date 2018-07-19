@@ -1,5 +1,8 @@
 package com.example.demo.services;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +20,7 @@ public class PlayerService {
 		
 	public Iterable<PlayerKD> findAllByKD () {
 		
-		List<PlayerKD> playerKD = null;
+		List<PlayerKD> playerKD = new ArrayList<PlayerKD>();
 		
 		List<Player> players = repo.findAll(); 
 		
@@ -26,6 +29,15 @@ public class PlayerService {
 			playerKD.add(new PlayerKD(p.name,p.eliminations/p.deaths));
 			
 		}
+		
+		Collections.sort(playerKD, new Comparator<PlayerKD>() {
+			
+			@Override
+		    public int compare(PlayerKD o1, PlayerKD o2) {
+		        return (int) (o1.KD - o2.KD);
+		    }
+						
+		});
 		
 		return playerKD;
 		

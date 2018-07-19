@@ -8,7 +8,8 @@ public class PlayerKD {
 	public PlayerKD (String name, Double KD) {
 		
 		this.name = name;
-		this.KD = KD;
+		this.KD =KD;
+		
 		
 	}
 
