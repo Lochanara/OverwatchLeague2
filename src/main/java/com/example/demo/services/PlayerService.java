@@ -26,7 +26,7 @@ public class PlayerService {
 		
 		for (Player p : players) {
 			
-			playerKD.add(new PlayerKD(p.name,p.eliminations/p.deaths));
+			playerKD.add(new PlayerKD(p.name,p.eliminations/p.deaths, p.playerId, p.teamId, p.role, p.team, p.eliminations, p.deaths, p.damage, p.healing, p.ultimates, p.finalBlows, p.timePlayed));
 			
 		}
 		
@@ -42,5 +42,7 @@ public class PlayerService {
 		return playerKD;
 		
 	}
+	
+	//public Iterable<Player>
 
 }
