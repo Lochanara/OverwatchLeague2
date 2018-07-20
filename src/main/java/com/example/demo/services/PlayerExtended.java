@@ -10,8 +10,7 @@ public class PlayerExtended {
 	public Double totalHealing;
 	public Double totalUltimates;
 	public Double totalFinalBlows;
-	public Double totalTimePlayed;
-	
+
 	public int playerId;
 	public int teamId;
 	public String role;
@@ -33,11 +32,11 @@ public class PlayerExtended {
 		this.totalEliminations = totalEliminations;
 		this.totalFinalBlows = totalFinalBlows;
 		this.totalHealing =  totalHealing;
-		this.totalTimePlayed = totalTimePlayed;
 		this.totalUltimates = totalUltimates;
 		this.playerId = playerId;
 		this.role = role;
 		this.team = team;
+		this.teamId = teamId;
 		this.eliminations = eliminations;
 		this.deaths = deaths;
 		this.damage = damage;
